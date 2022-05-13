@@ -13,3 +13,5 @@ Run the following from the heroku command line:
 ```
 heroku buildpacks:add --index 1 https://github.com/warung-international/heroku-opus.git
 ```
+
+Note: This buildpack should be added before the main language buildpack (by using --index 1), since the application process types are calculated from the last buildpack in the list if no Procfile is specified.
