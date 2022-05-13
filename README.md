@@ -1,21 +1,16 @@
 # heroku-opus
 
+[![Test](https://github.com/warung-international/heroku-opus/workflows/Test/badge.svg?branch=master&event=push)](https://github.com/warung-international/heroku-opus/actions?query=workflow%3ATest+event%3Apush+branch%3Amaster)  
+
+> This is a fork of the [original repository](https://github.com/xrisk/heroku-opus). All thanks to the past contributors.
+
 Installs the opus codec for usage with heroku apps. 
 
-## How to use
+## Usage
 
-https://devcenter.heroku.com/articles/using-multiple-buildpacks-for-an-app#adding-a-buildpack
+Run the following from the heroku command line:
 
-Please leave a star if you found this useful.
-
-Also see the warning below.
-
-## Example use case
-
-* YouTube downloader - use youtube-dl with https://github.com/xrisk/ffmpeg-lame-yasm. See for example: https://github.com/xrisk/webdl
-* Discord music bot - use discord.py (https://github.com/Rapptz/discord.py/blob/master/examples/basic_voice.py) with this buildpack
-
-## Warning
-
-Do not use `discord.opus.load_opus` (for discord.py and similar). This library will be picked up by discord.py automatically!
+```
+heroku buildpacks:add --index 1 https://github.com/warung-international/heroku-opus.git
+```
 
