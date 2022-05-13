@@ -13,4 +13,3 @@ Run the following from the heroku command line:
 ```
 heroku buildpacks:add --index 1 https://github.com/warung-international/heroku-opus.git
 ```
-
